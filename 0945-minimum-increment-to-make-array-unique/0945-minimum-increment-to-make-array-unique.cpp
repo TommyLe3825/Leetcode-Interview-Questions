@@ -5,8 +5,9 @@ public:
 
         int moves = 0;
         //Iterate through the sorted array starting from the second element
+        //This is because the first element is basically guarantee to be unique
         for (int i = 1; i < nums.size(); ++i) {
-            // If the current element is not greater than the previous element
+            //If the current element is not greater than the previous element
             if (nums[i] <= nums[i - 1]) {
                 //Calculate the number of increments needed
                 int increment = nums[i - 1] + 1 - nums[i];
