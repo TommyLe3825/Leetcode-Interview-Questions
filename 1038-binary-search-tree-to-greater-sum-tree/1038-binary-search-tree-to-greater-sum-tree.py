@@ -9,12 +9,12 @@ class Solution:
     def bstToGst(self, root: TreeNode) -> TreeNode:
         self.total = 0
         
-        def reverse_inorder(node):
-            if not node:
+        def reverse_inorder(node): 
+            if not node: #Base case to when it reaches the leaf node's child
                 return
             
             # Recur on the right subtree
-            reverse_inorder(node.right)
+            reverse_inorder(node.right) 
             
             # Update the total and node's value
             self.total += node.val
